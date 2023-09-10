@@ -29,3 +29,33 @@ for (int i = 0; i < AnitialArray.Length; i++)
     if (AnitialArray[i].Length <= 3)
         n++;
 }
+if (n < 1)
+{
+    Console.WriteLine("There are no elements in AnitialArray to include in FinalArray");
+
+}
+else
+{
+    Console.WriteLine();
+    Console.WriteLine($"Length of FinalArray is {n} elements and they are following:");
+
+    string[] FinalArray = new string[n];
+
+
+    int j = 0;
+    for (int i = 0; i < AnitialArray.Length; i++)
+    {
+        if (AnitialArray[i].Length <= 3)
+        {
+            FinalArray[j] = AnitialArray[i];
+            j++;
+        }
+    }
+
+    for (int i = 0; i < FinalArray.Length; i++)
+    {
+        Console.Write($" {FinalArray[i]} |");
+    }
+    System.Console.WriteLine();
+    System.Console.WriteLine();
+}
