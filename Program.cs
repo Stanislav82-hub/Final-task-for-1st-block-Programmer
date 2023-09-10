@@ -2,6 +2,7 @@
 // которых меньше, либо равна 3 символам. Первоначальный массив можно ввести с клавиатуры, либо задать на
 // старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, лучше обойтись
 // исключительно массивами.
+
 Console.Write("How many elements AnitialArray should consist of?:\t");
 int AnitialArrayLenght = int.Parse(Console.ReadLine());
 Console.WriteLine();
@@ -21,3 +22,10 @@ for (int i = 0; i < AnitialArray.Length; i++)
 }
 Console.WriteLine();
 Console.WriteLine("========================================================================");
+
+int n = 0;
+for (int i = 0; i < AnitialArray.Length; i++)
+{
+    if (AnitialArray[i].Length <= 3)
+        n++;
+}
